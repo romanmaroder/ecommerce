@@ -25,6 +25,10 @@
   &__center {
 	margin     : 0 auto;
 	margin-top : 60px;
+
+	&:last-child {
+	  margin-top : 30px;
+	}
   }
 }
 
@@ -48,10 +52,11 @@
 	flex-direction  : row;
 	justify-content : space-around;
 	align-items     : center;
-	position: relative;
+	position        : relative;
 	@media screen and (min-width : 668px) {
 	  align-items : flex-start;
 	}
+
 	&:hover .goods__close {
 	  display : block;
 	}
@@ -70,16 +75,16 @@
   padding-bottom : 35px;
 
   &__close {
-	display : none;
-	position : absolute;
-	top: 10px;
-	left : 15px;
-	font-size: 14.1px;
-	line-height: 25px;
-	font-weight: 500;
-	letter-spacing: .01em;
-	color:#555f76;
-	cursor:pointer;
+	display        : none;
+	position       : absolute;
+	top            : 10px;
+	left           : 15px;
+	font-size      : 14.1px;
+	line-height    : 25px;
+	font-weight    : 500;
+	letter-spacing : .01em;
+	color          : #555F76;
+	cursor         : pointer;
   }
 
   &__item {

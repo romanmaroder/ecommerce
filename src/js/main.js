@@ -68,6 +68,11 @@ $(document).ready(function () {
         $('.nav-menu').toggleClass('nav-menu--active');
         $('body').toggleClass('boby-active');
     });
+
+    // Проверяем корзину на наличие товара
+    if ($('[data-js-goods-list]').children('.goods').length > 0) {
+        $('.btn__cart--checkout').css('display', 'flex');
+    }
     //Clear cart
     $('[data-js-goods-clear]').on('click', function (e) {
         e.preventDefault();
@@ -76,6 +81,7 @@ $(document).ready(function () {
         });
         $('[data-js-empty]').html('Your Basket is empty');
         $('[data-js-goods-total]').remove();
+        $('.btn__cart--checkout').remove();
         $(this).remove();
     });
     //Delete goods item
@@ -89,6 +95,7 @@ $(document).ready(function () {
             $('[data-js-empty]').html('Your Basket is empty');
             $('[data-js-goods-total]').remove();
             $('[data-js-goods-clear]').remove();
+            $('.btn__cart--checkout').remove();
         }
     });
     // location to product-details
