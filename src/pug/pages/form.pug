@@ -44,3 +44,22 @@ block content
 				label(for="submit" class="form__label")
 					input(type="submit"  value="Save" id="submit" class="btn btn__form")
 
+			h1(class="form-block__title") Checkout
+			.form-block__info
+				p.quantity Quantity :pcs
+					span
+				p.subtotal Subtotal :$
+					span
+				p.block-info__message
+					|To confirm the order, fill out the form. Our manager will contact you
+			ul.form-block__errors.errors
+				li.errors__item
+			form.form(method="POST" action="#")
+				label(for="name" class="form__label") Your name
+					input(type="text" name="name" required placeholder="Name" value="" id="name" class="form__input-elem")
+				label(for="phone" class="form__label") Phone number
+					input(type="phone" name="phone" required placeholder="phone" value="" id="phone" class="form__input-elem")
+				label(for="message" class="form__label") Message
+					textarea(type="password" name="message" required  value="" id="message" class="form__textarea")
+				label(for="submit" class="form__label")
+					input(type="submit"  value="Checkout" id="submit" class="btn btn__form")

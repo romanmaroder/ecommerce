@@ -113,7 +113,7 @@ $(document).ready(function () {
     // ==============================================================
     // Корзина
 
-    $('.cart').on('click', function (e) {
+    /*$('.cart').on('click', function (e) {
         e.preventDefault();
         $('.cart__mini-cart').toggleClass('cart__mini-cart--show');
     });
@@ -196,6 +196,17 @@ $(document).ready(function () {
         $('.cart__mini-cart').html(out);
 
     }
-
+*/
+    $('.card__add-btn').click(function () {
+        let id = $(this).attr("data-id");
+        $.ajax({
+            type: 'POST',
+            url: "/cart/addAjax/"+id,
+            success: function (data) {
+                $('#cart-count').html(data);
+            }
+        });
+        return false;
+    });
 
 });
