@@ -106,9 +106,9 @@
 
 .cart {
   cursor : pointer;
+  position : relative;
 
-  &::after {
-	content          : attr(data-count);
+  &__count {
 	position         : absolute;
 	width            : 11px;
 	height           : 11px;

@@ -17,7 +17,9 @@ nav.nav
             li.menu__item
                 a.menu__link(href="#") Blog
         .nav-cart.cart(data-count=3)
-            img(src="images/nav/header_cart.png" alt="cart" title="Cart")
+            span#cart-count.cart__count
+            a(href="/cart/")
+                img(src="images/nav/header_cart.png" alt="cart" title="Cart")
             .cart__mini-cart
         .nav-login.login
             .login__inner
