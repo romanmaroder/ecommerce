@@ -1,0 +1,43 @@
+mixin card (href,title,rating, price)
+    .card
+        .card__img
+            img(src=href alt=title title=title)
+        .card__content
+            .card__title= title
+            .card__rating
+                img(src=rating alt=rating title=rating)
+            .card__price= price
+
+mixin cardBg (href ,imgSrc, title, subtitle, price)
+    li.card.card--bg
+        a.card__link.card__add-btn(href=href data-id="") Add to card
+        .card__add
+        .card__img
+            img(src=imgSrc alt=title title=title)
+        .card__content
+            .card__title= title
+            .card__subtitle= subtitle
+            .card__price=price
+
+mixin cardBgGrid (href ,imgSrc, title, subtitle, price)
+    li.card.card--bg.card__grid
+        a.card__link.card__add-btn(href=href data-id="") Add to card
+        .card__add
+        .card__img.card__img--grid
+            img(src=imgSrc alt=title title=title)
+        .card__content
+            .card__title= title
+            .card__subtitle= subtitle
+            .card__price=price
+
+mixin cardList (href ,imgSrc, title, subtitle, price,text)
+    li.card.card__list
+        .card__img.card__img--list
+            img(src=imgSrc alt=title title=title)
+        .card__content.card__content--list
+            a(href="#").card__title= title
+            .card__subtitle= subtitle
+            .card__price.card__price--list=price
+            .card__text=text
+            button.btn.btn__card.card__add-btn(data-id="") Add to card
+

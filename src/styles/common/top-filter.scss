@@ -1,0 +1,215 @@
+.top-filter {
+  display          : flex;
+  flex-direction   : column;
+  min-height       : 44px;
+  background-color : #F1F3F8;
+  border-radius    : 4px;
+  margin           : 0 auto;
+  padding          : 10px 20px;
+  flex-wrap        : wrap;
+  @media screen and (min-width : 768px) {
+	flex-direction : row;
+  }
+
+  &__col {
+	display     : flex;
+	align-items : center;
+	@media screen and (min-width : 768px) {
+	  margin-bottom : 5px;
+	}
+  }
+
+  &__title {
+	margin-right   : 15px;
+	opacity        : 0.74;
+	font-size      : 10px;
+	line-height    : 21px;
+	font-weight    : 700;
+	text-transform : uppercase;
+	letter-spacing : 0.02em;
+	color          : #64759F;
+	display        : none;
+	@media screen and (min-width : 668px) {
+	  display : flex;
+	}
+
+	&--mobile {
+	  display : flex;
+	  @media screen and (min-width : 768px) {
+		display : none;
+	  }
+	}
+  }
+
+  &__content {
+	display : flex;
+  }
+
+  &__icon {
+	width           : 20px;
+	height          : 20px;
+	background      : #FFFFFF;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+	margin-right    : 10px;
+	cursor          : pointer;
+
+	& > svg {
+	  width          : 12px;
+	  height         : 12px;
+	  fill           : #64759F;
+	  transition     : fill 0.3s ease-in;
+	  pointer-events : none;
+	}
+
+	&:last-child {
+	  margin-right : 0;
+	}
+  }
+
+  &__form {
+	display : none;
+	@media screen and (min-width : 668px) {
+	  display : flex;
+	}
+
+	&--mobile {
+	  display : flex;
+	  @media screen and (min-width : 768px) {
+		display : none;
+	  }
+	}
+  }
+
+  .col-view {
+	display : none;
+	@media screen and (min-width : 768px) {
+	  display      : flex;
+	  margin-right : 52px;
+
+	}
+  }
+
+  .col-sort {
+	flex-wrap : wrap;
+	@media screen and (min-width : 668px) {
+	  margin-right : auto;
+
+	}
+
+	& > .top-filter__content {
+	  margin-bottom   : 5px;
+	  display         : flex;
+	  justify-content : space-between;
+	  flex            : 1 1 auto;
+	  @media screen and (min-width : 355px) {
+		justify-content : center;
+	  }
+	  @media screen and (min-width : 475px) {
+		justify-content : space-between;
+	  }
+	  @media screen and (min-width : 550px) {
+		justify-content : center;
+	  }
+	  @media screen and (min-width : 768px) {
+		margin-right  : 20px;
+		margin-bottom : 0;
+	  }
+
+	  &:last-child {
+		margin-right : 0;
+	  }
+	}
+  }
+
+  .col-search {
+	display : none;
+
+	@media screen and (min-width : 905px) {
+	  display : flex;
+	}
+  }
+
+  .form-filter {
+	position : relative;
+	display  : none;
+	@media screen and (min-width : 668px) {
+	  display : flex;
+	}
+
+	&__input {
+	  width            : 160px;
+	  height           : 24px;
+	  background-color : #FFFFFF;
+	  border           : 1px solid #64759F33;
+	  border-radius    : 3.0px;
+	  padding          : 5px 0 5px 10px;
+	  position         : relative;
+
+	  &::placeholder {
+		opacity        : 0.56;
+		font-size      : 10px;
+		line-height    : 1;
+		font-weight    : 400;
+		letter-spacing : 0.02em;
+		color          : #64759F;
+	  }
+
+	}
+
+	&__icon {
+	  width           : 35px;
+	  position        : absolute;
+	  display         : flex;
+	  align-items     : center;
+	  justify-content : center;
+	  right           : 0;
+	  height          : 24px;
+	  border-left     : 0.3px solid #64759F33;
+	  cursor          : pointer;
+	}
+  }
+
+  //Стили select в топ фильтре
+  .form-filter__select .jq-selectbox {
+	margin-right : 80px;
+
+	&__select {
+	  width         : 77px;
+	  height        : 22px;
+	  border        : 0.3px solid #64759FA8;
+	  border-radius : 3.0px;
+	  position      : relative;
+	  background    : #FFFFFF;
+	  padding       : 5px 10px 5px 5px;
+
+	  &-text {
+		opacity        : 0.67;
+		font-size      : 10px;
+		line-height    : 1;
+		font-weight    : 700;
+		letter-spacing : 0.01em;
+		color          : #64759F;
+	  }
+	}
+
+	&__trigger {
+	  border-left : 0.3px solid #64759FA8;
+	  width       : 23px;
+
+	  &-arrow {
+		border-top-color : #64759F;
+		top              : 50%;
+		left             : 50%;
+		transform        : translate(-50%, -50%);
+	  }
+	}
+
+	&:last-child {
+	  margin-right : 0;
+	}
+
+
+  }
+}

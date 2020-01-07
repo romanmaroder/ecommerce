@@ -1,0 +1,236 @@
+.featured {
+  background-color : #F1F3F8;
+  padding          : 50px 0;
+  position         : relative;
+
+  @media screen and (min-width : 768px) {
+	top : -40px;
+  }
+
+  &__slider {
+	margin-top : 60px;
+  }
+}
+
+.products {
+  background-color : #FFFFFF;
+  padding          : 55px 0 55px;
+
+  &__content {
+	display         : flex;
+	flex-wrap       : wrap;
+	justify-content : space-between;
+  }
+
+  &__filter {
+	margin     : 50px auto;
+	text-align : center;
+  }
+
+  &__button-block {
+	display         : flex;
+	justify-content : center;
+  }
+}
+
+.subscribe {
+  padding           : 60px 0;
+  background-image  : url("../images/subscribe/mounth.jpg");
+  background-size   : cover;
+  background-repeat : no-repeat;
+
+  &__form {
+	margin-top      : 30px;
+	display         : flex;
+	justify-content : center;
+	@media screen and (min-width : 768px) {
+	  margin-top : 60px;
+	}
+  }
+
+}
+
+.news {
+  padding : 70px 0 80px;
+
+  &__content {
+	display         : flex;
+	flex-direction  : column;
+	justify-content : space-between;
+	margin-top      : 50px;
+	@media screen and (min-width : 768px) {
+	  flex-direction : row;
+
+	}
+  }
+
+  &__column {
+	//flex : 1 1 60%;
+	max-width : 595px;
+
+	&--one {
+	  //flex : 1 1 40%;
+	  max-width : 385px;
+	  display   : flex;
+	  @media screen and (min-width : 768px) {
+		margin-right : 25px;
+
+	  }
+	}
+  }
+}
+
+/* Стили заголовка - подзаголовка - карточки -  фильтра - формы*/
+
+.title {
+  font-size      : 17px;
+  line-height    : 28px;
+  font-weight    : 700;
+  text-transform : uppercase;
+  color          : #43537B;
+  text-align     : center;
+  @media screen and (min-width : 768px) {
+	font-size : 20px;
+
+  }
+}
+
+.subtitle {
+  font-size   : 13px;
+  line-height : 27px;
+  font-weight : 500;
+  color       : #64759F;
+  text-align  : center;
+  @media screen and (min-width : 768px) {
+	line-height : 20px;
+
+
+  }
+}
+
+
+.filter {
+  max-width : 360px;
+
+  &__list {
+	display         : flex;
+	justify-content : space-between;
+  }
+
+  &__link {
+	font-size      : 15px;
+	line-height    : 28px;
+	font-weight    : 500;
+	letter-spacing : 0.01em;
+	color          : $color-base;
+	text-transform : uppercase;
+
+	&:hover {
+	  color : $headings-color;
+	}
+  }
+
+}
+
+.form {
+  &__input {
+	padding          : 15px 0 15px 25px;
+	max-width        : 335px;
+	height           : 48px;
+	background-color : #FFFFFF;
+	border           : 1px solid #555F7654;
+	border-radius    : 24px 0 0 24px;
+
+	&::placeholder {
+	  opacity     : 0.45;
+	  font-size   : 12px;
+	  line-height : 1;
+	  font-weight : 500;
+	  color       : #8791A9;
+	  @media screen and (min-width : 768px) {
+		font-size   : 14px;
+		line-height : 1;
+	  }
+	}
+
+	@media screen and (min-width : 768px) {
+	  width   : 335px;
+	  padding : 15px 0 15px 35px;
+
+	}
+  }
+}
+
+.article-news {
+  background-color : #F1F3F8;
+  margin-bottom    : 25px;
+
+  &__content {
+	padding : 15px 20px 15px 20px;
+
+  }
+
+  &__title {
+	font-size      : 18px;
+	line-height    : 28px;
+	font-weight    : 700;
+	letter-spacing : 0.01em;
+	color          : #43537B;
+	margin-bottom  : 5px;
+
+	&--big {
+	  margin-bottom : 20px;
+	}
+
+  }
+
+  &__text {
+	opacity        : 0.8;
+	font-size      : 14.4px;
+	line-height    : 20px;
+	font-weight    : 500;
+	letter-spacing : 0.01em;
+	color          : #64759F;
+  }
+
+  &__btn {
+	margin-top      : 30px;
+	font-size       : 15px;
+	line-height     : 28px;
+	font-weight     : 500;
+	letter-spacing  : 0.01em;
+	color           : #36C2FF;
+	text-decoration : none;
+	display         : block;
+  }
+
+
+}
+
+/* Стили слайдера*/
+
+.slick-dots {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  position        : relative;
+  top             : 40px;
+}
+
+.slick-dots li {
+  width         : 9px;
+  height        : 9px;
+  border-radius : 50%;
+  background    : $bg-border;
+}
+
+.slick-dots .slick-active {
+  width         : 11px;
+  height        : 11px;
+  border-radius : 50%;
+  background    : $color-text-special;
+}
+
+.slick-dots li button:before {
+  content : '';
+}

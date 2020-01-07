@@ -1,0 +1,41 @@
+.breadcrumbs {
+  background-color : #f7f8fa;
+   height : 55px;
+   display : flex;
+   align-items: center;
+   //opacity: 0.05;
+
+  &__list {
+	display    : flex;
+	list-style : none;
+	padding    : 0;
+  }
+
+  &__item {
+	display : inline-block;
+
+	//&:last-child a {
+	//   color          : #a49d99;
+	//   text-decoration: none;
+	//   cursor         : default;
+	//   pointer-events : none;
+	//}
+	//
+	//&:last-child span {
+	//   display: none;
+	//}
+  }
+
+  &__link {
+	font-size      : 10px;
+	line-height    : 27px;
+	font-weight    : 700;
+	text-transform : uppercase;
+	letter-spacing : 0.01em;
+	color          : #020304;
+	opacity        : 0.5;
+     transition: color 0.3s ease-in;
+  }
+
+
+}

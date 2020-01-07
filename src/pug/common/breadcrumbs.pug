@@ -1,0 +1,16 @@
+// bread crumbs
+mixin breadCrumbsDetail( href )
+    .breadcrumbs.content
+        .container
+            ul.breadcrumbs__list
+                each val,index in {'home':'home /','women':' women /','product detail': ' product detail'}
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href=index + ".html")=val
+
+mixin breadCrumbsCart( href )
+    .breadcrumbs.content
+        .container
+            ul.breadcrumbs__list
+                each val,index in {'home':'home /','women':' women /','list view': ' list view /','cart':'cart'}
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href=index + ".html")=val

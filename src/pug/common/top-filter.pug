@@ -1,0 +1,45 @@
+form.top-filter
+    .top-filter__col.col-view
+        .top-filter__title View as
+        .top-filter__content
+            .top-filter__icon.top-filter__icon--list
+                include ../../images/icon/list_icon.svg
+            .top-filter__icon.top-filter__icon--grid
+                include  ../../images/icon/grid_icon.svg
+    .top-filter__col.col-sort
+        .top-filter__content
+            .top-filter__title Sort by
+            .top-filter__title.top-filter__title--mobile Categories
+            .top-filter__form.top-filter__form--mobile
+                select.form-filter__select
+                    option(value="Name") T-shirt
+                    option(value="Shirt") Shirt
+                    option(value="Shoes") Shoes
+                    option(value="Bags") Bags
+                    option(value="Jacket") Jacket
+                    option(value="Sunglass") Sunglass
+                    option(value="Cap") Cap
+                    option(value="Belt") Belt
+                    option(value="Jeans") Jeans
+                    option(value="Shoes") Shoes
+            .top-filter__form
+                select.form-filter__select.form-filter__select--name-size(data-name="name")
+                    option(value="Name") Name
+                    option(value="Size") Size
+        .top-filter__content
+            .top-filter__title Show items
+            .top-filter__title.top-filter__title--mobile Price
+            .top-filter__form.form-filter
+                select.form-filter__select.form-filter__select--item(data-item="item")
+                    option(value="Items") 49 items
+                    option(value="Items") 29 items
+            .top-filter__form.top-filter__form--mobile
+                select.form-filter__select
+                    option(value="max") 100 - 0
+                    option(value="min") 0 -100
+    .top-filter__col.col-search
+        .top-filter__content
+            .top-filter__form.form-filter
+                input(type="text" placeholder="Search by items").form-filter__input
+                .form-filter__icon
+                    img(src="images/filter/search_icon.png")

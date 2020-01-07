@@ -1,0 +1,103 @@
+extends ../templates/template-base
+
+block styles
+    link(rel="stylesheet" href="css/home.css")
+
+block variables
+    - var title = "Главная"
+
+block content
+    section.featured
+        .container
+            .featured__title.title Featured Items
+            .featured__subtitle.subtitle Let’s see featured items!
+            .featured__slider
+                .slider.responsive
+                    .slider__item
+                        include ../helpers/mixins
+                        +card('images/future/bag.jpg','Vaber Jinish Very Stylish','images/future/star.png','$255')
+                    .slider__item
+                        +card('images/future/clock.jpg','Vaber Jinish Very Stylish','images/future/star.png','$255')
+                    .slider__item
+                        +card('images/future/bag_wooman.jpg','Vaber Jinish Very Stylish','images/future/star.png','$255')
+                    .slider__item
+                        +card('images/future/bag.jpg','Vaber Jinish Very Stylish','images/future/star.png','$255')
+                    .slider__item
+                        +card('images/future/clock.jpg','Vaber Jinish Very Stylish','images/future/star.png','$255')
+                    .slider__item
+                        +card('images/future/bag_wooman.jpg','Vaber Jinish Very Stylish','images/future/star.png','$255')
+    section.products
+        .container
+            .products__title.title Products Collections
+            .products__subtitle.subtitle Check out popular products in our shop!
+            .products__filter.filter
+                ul.filter__list
+                    li.filter__item
+                        a.filter__link(href="#") All
+                    li.filter__item
+                        a.filter__link(href="#") MENS
+                    li.filter__item
+                        a.filter__link(href="#") WOMENS
+                    li.filter__item
+                        a.filter__link(href="#") KIDS
+            ul.products__content
+                include ../helpers/mixins
+                +cardBg('#', 'images/products/jacket_grey.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                '$28')
+                +cardBg('#', 'images/products/bag_wooman.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                    '$28')
+                +cardBg('#', 'images/products/jacket-blue.jpg','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                    '$28')
+                +cardBg('#', 'images/products/clock_2.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                    '$28')
+                +cardBg('#', 'images/products/belt.png','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                    '$28')
+                +cardBg('#', 'images/products/shoes.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                    '$28')
+            .products__button-block
+                button.products__btn.btn__product MORE
+    section.subscribe.content
+        .container
+            .subscribe__title.title Subscribe To Our Newsletter
+            .subscribe__subtitle.subtitle Only our latest news to send your email addre
+            form.subscribe__form.form
+                input.form__input(type="email" placeholder="Enter your email address" name="email")
+                button.form__button.btn__form-subscribe Subscribe
+    section.news
+        .container
+            .news__title.title Latest New’s
+            .news__subtitle.subtitle Read latests new’s in our blog
+            .news__content
+                .news__column.news__column--one
+                    article.article-news
+                        .article-news__img
+                            img(src="images/news/indus.jpg" alt="news" title="news")
+                        .article-news__content
+                            .article-news__title.article-news__title--big Top kamla of this year!
+                            .article-news__text
+                                |Ashole uni kamla noy uni VONDU & uni dami pc use kore so unar digayn o dami. Typesetting industry.
+                                |Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                |took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                |but also the leap into electronic typesetting remaining essentially unchanged. It was popularised in the 1960s
+                                |with the release of Letraset sheets containing Lorem Ipsum passages,
+                                |and more recently with desktop
+                            a.article-news__btn READ MORE
+                .news__column
+                    article.article-news
+                        .article-news__img
+                            img(src="images/news/glass_man.jpg" alt="news" title="news")
+                        .article-news__content
+                            .article-news__title Specialize in Mobile and Web UI/UX!
+                            .article-news__text Kotha sotto blv it or not, is simply dummy text of the printing and typesetting industry.
+                                |Lorem Ipsum has been the industry's standard dummy text. ever.
+                                |since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    article.article-news
+                        .article-news__img
+                            img(src="images/news/cap.jpg" alt="news" title="news")
+                        .article-news__content
+                            .article-news__title Best photo of this month!
+                            .article-news__text Kotha sotto blv it or not, is simply dummy text of the printing and typesetting industry.
+                                | Lorem Ipsum has been the industry's standard dummy text. ever.
+                                | since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+block scripts
+    script(src="js/slider.js")

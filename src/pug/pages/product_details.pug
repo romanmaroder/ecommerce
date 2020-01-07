@@ -1,0 +1,55 @@
+extends ../templates/template-nav
+
+block styles
+    link(rel="stylesheet" href="libs/slick.css")
+    link(rel="stylesheet" href="libs/slick-theme.css")
+    link(rel="stylesheet" href="css/product-details.css")
+
+block variables
+    - var title = "Товар"
+
+block breadcrumbs
+    include  ../common/breadcrumbs
+    +breadCrumbsDetail('product detail')
+
+block content
+
+    section.product
+        .container
+            .product__inner
+                .slider.slider-for
+                    .slider-for__item
+                        img(src="images/products/bag_big.png")
+                    .slider-for__item
+                        img(src="images/products/bag_big.png")
+                    .slider-for__item
+                        img(src="images/products/bag_big.png")
+                    .slider-for__item
+                        img(src="images/products/bag_big.png")
+                .slider.slider-nav
+                    .slider-nav__item
+                        img(src="images/products/bag_wooman.png")
+                    .slider-nav__item
+                        img(src="images/products/bag_wooman.png")
+                    .slider-nav__item
+                        img(src="images/products/bag_wooman.png")
+                    .slider-nav__item
+                        img(src="images/products/bag_wooman.png")
+                .product__content
+                    .product__title Bag of ruposhi
+                    .product__price $28
+                    .product__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                        |sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                        |erat volutpat. Ut wisi enim ad minim veniam,
+                        |quis nostrud exerci tation ullamcorper suscipit
+                    form.product__form.form-details
+                        .form-details__block
+                            select.form-details__select.elem-select
+                                option(value="colors") Colors
+                            select.form-details__select.elem-select
+                                option(value="Sizes") Sizes
+                        button.btn.btn__form-details Add to cart
+
+block scripts
+    script(src="libs/slick.min.js")
+    script(src="js/slider.js")

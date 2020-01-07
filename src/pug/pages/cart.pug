@@ -1,0 +1,74 @@
+extends ../templates/template-nav
+
+block styles
+    link(rel="stylesheet" href="css/cart.css")
+
+block variables
+    - var title = "Корзина"
+
+block breadcrumbs
+    include  ../common/breadcrumbs
+    +breadCrumbsCart('product detail')
+
+block content
+    section.cart-block
+        .container
+            h1.cart-block__title.title(data-js-empty) basket
+
+            ul.cart-block__inner.cart-inner(data-js-goods-list)
+                li.cart-inner__head.cart-head
+                    .cart-head__item ITEM
+                    .cart-head__item NAME AND DISCRIPTION
+                    .cart-head__item PRICE
+                    .cart-head__item QUANTITY
+                    .cart-head__item TOTAL
+                hr
+                li.cart-inner__goods.goods(data-id="")
+                    span.goods__close(data-js-close) X
+                    .goods__item.goods__item--img
+                        img(src="images/products/bag_wooman.png")
+                    .goods__item.goods__item--desc.desc-inner
+                        .desc-inner__title Bag of ruposhi
+                        .desc-inner__option Color : Red
+                        .desc-inner__option Size : XL
+                        .desc-inner__price.desc-inner__price--visible Price : $252
+                        .desc-inner__count.desc-inner__count--visible Count : 2
+                        .desc-inner__total.desc-inner__total--visible Total : $304
+                    .goods__item.goods__item--price $252
+                    .goods__item.goods__item--count 2
+                    .goods__item.goods__item--total $304
+                hr
+                li.cart-inner__goods.goods(data-id="")
+                    span.goods__close(data-js-close) X
+                    .goods__item.goods__item--img
+                        img(src="images/products/clock_2.png")
+                    .goods__item.goods__item--desc.desc-inner
+                        .desc-inner__title Watch
+                        .desc-inner__option Color : Orange
+                        .desc-inner__option Size : XXL
+                        .desc-inner__price.desc-inner__price--visible Price : $320
+                        .desc-inner__count.desc-inner__count--visible Count : 1
+                        .desc-inner__total.desc-inner__total--visible Total : $320
+                    .goods__item.goods__item--price $320
+                    .goods__item.goods__item--count 1
+                    .goods__item.goods__item--total $320
+                hr
+                li.cart-inner__goods.goods(data-id="")
+                    span.goods__close(data-js-close) X
+                    .goods__item.goods__item--img
+                        img(src="images/products/shoes.jpg")
+                    .goods__item.goods__item--desc.desc-inner
+                        .desc-inner__title Shoes of prince
+                        .desc-inner__option Color : Black
+                        .desc-inner__option Size : X
+                        .desc-inner__price.desc-inner__price--visible Price : $320
+                        .desc-inner__count.desc-inner__count--visible Count : 1
+                        .desc-inner__total.desc-inner__total--visible Total : $320
+                    .goods__item.goods__item--price $320
+                    .goods__item.goods__item--count 1
+                    .goods__item.goods__item--total $320
+                hr
+            .cart-block__btn
+                .btn.btn__clear(data-js-goods-clear) Clear
+                .btn.btn__total(data-js-goods-total) SUBTOTAL : $624
+            a.cart-block__center.btn.btn__continue(href="view.html") CONTINUE SHOPPING

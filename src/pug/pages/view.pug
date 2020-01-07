@@ -1,0 +1,76 @@
+extends ../templates/template-filter
+
+block styles
+    link(rel="stylesheet" href="css/view.css")
+
+block variables
+    - var title = "Фильтр Плитка"
+
+block breadcrumbs
+    include  ../common/breadcrumbs
+    +breadCrumbsCart('product detail')
+
+
+
+block content
+    .container
+        .wrapper
+            block aside
+            include ../common/aside
+            .wrapper__content
+                block filter
+                include ../common/top-filter
+                ul.view-grid
+                    include ../helpers/mixins
+                    +cardBgGrid('#', 'images/products/jacket_grey.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                        '$28')
+                    +cardBgGrid('#', 'images/products/bag_wooman.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+                    +cardBgGrid('#', 'images/products/jacket-blue.jpg','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+                    +cardBgGrid('#', 'images/products/clock_2.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+                    +cardBgGrid('#', 'images/products/belt.png','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+                    +cardBgGrid('#', 'images/products/shoes.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+                    +cardBgGrid('#', 'images/products/clock_2.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                        '$28')
+                    +cardBgGrid('#', 'images/products/belt.png','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+                    +cardBgGrid('#', 'images/products/shoes.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                            '$28')
+
+                    +cardList('#', 'images/products/jacket_grey.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/bag_wooman.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/jacket-blue.jpg','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/clock_2.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/belt.png','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/shoes.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/clock_2.png','Fatafati Stylish Belt','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/belt.png','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                    +cardList('#', 'images/products/shoes.jpg','Jacket Of Prince','Valo lagla kinen na kinla poth mapen',
+                        '$28','Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. ' +
+                    'Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit')
+                include ../common/pagination
+
+block scripts
+    script(src="js/filter.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js")
+    script(src="js/main.js")

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible" content="ie=edge")
+
+      link(rel="stylesheet" href="libs/slick.css")
+      link(rel="stylesheet" href="libs/slick-theme.css")
+      link(rel="stylesheet" href="libs/magnific-popup.css")
+      link(rel="stylesheet" href="libs/jquery.formstyler.theme.css")
+      link(rel="stylesheet" href="libs/jquery.formstyler.css")
+
+      link(rel="stylesheet" href="css/main.css")
+      block styles
+
+      block variables
+      title #{title}
+
+      link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic")
+      //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css")
+      //link(rel="stylesheet" href="libs/all.css")
+   body
+      include ../common/nav
+      include ../common/header
+
+
+      main.content
+         block content
+
+
+
+      include ../common/footer
+
+      block popup
+
+
+      script(src="libs/jquery.min.js")
+      script(src="libs/slick.min.js")
+      script(src="libs/jquery.magnific-popup.min.js")
+      script(src="libs/jquery.formstyler.js")
+      script(src="libs/all.min.js")
+
+      script(src="js/main.js")
+
+      block scripts

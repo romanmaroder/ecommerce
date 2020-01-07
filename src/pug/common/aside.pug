@@ -1,0 +1,77 @@
+//Вертикальная панель фильтров
+aside.aside-filter
+    .aside-filter__accordeon
+        .accordeon
+            .accordeon-head(data-accordeon-head) CATEGORIES
+            .accordeon-body(data-accordeon-body)
+                ul.accordeon-body__list
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link T-shirt
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Shirt
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Shoes
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Bags
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Jacket
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Sunglass
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Spray
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Cap
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Belt
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Jeans
+                    li.accordeon-body__item
+                        a(href="#").accordeon-body__link Shoes
+        .accordeon
+            .accordeon-head(data-accordeon-head) COLORS
+            .accordeon-body(data-accordeon-body)
+                form.accordeon-body__form
+                    .accordeon-body__block.accordeon-body__block--marg
+                        input(type="radio" name="color" id="blue").accordeon-body__radio
+                        label(for="blue")
+                        input(type="radio" name="color" id="yellow").accordeon-body__radio
+                        label(for="yellow")
+                        input(type="radio" name="color" id="green").accordeon-body__radio
+                        label(for="green")
+                    .accordeon-body__block
+                        input(type="radio" name="color" id="red").accordeon-body__radio
+                        label(for="red")
+                        input(type="radio" name="color" id="sky").accordeon-body__radio
+                        label(for="sky")
+                        input(type="radio" name="color" id="dark").accordeon-body__radio
+                        label(for="dark")
+        .accordeon
+            .accordeon-head(data-accordeon-head) SIZES
+            .accordeon-body(data-accordeon-body)
+                form.accordeon-body__form
+                    .accordeon-body__block
+                        input(type="checkbox" name="size" id="sizeXL").accordeon-body__checkbox
+                        label(for="sizeXL").accordeon-body__label XL
+                        input(type="checkbox" name="size" id="sizeSL").accordeon-body__checkbox
+                        label(for="sizeSL").accordeon-body__label SL
+                        input(type="checkbox" name="size" id="sizeML").accordeon-body__checkbox
+                        label(for="sizeML").accordeon-body__label M
+                    .accordeon-body__block
+                        input(type="checkbox" name="size" id="sizeL").accordeon-body__checkbox
+                        label(for="sizeL").accordeon-body__label L
+                        input(type="checkbox" name="size" id="sizeXXL").accordeon-body__checkbox
+                        label(for="sizeXXL").accordeon-body__label XXL
+                        input(type="checkbox" name="size" id="sizeM").accordeon-body__checkbox
+                        label(for="sizeM").accordeon-body__label M
+        .accordeon
+            .accordeon-head(data-accordeon-head) PRICE RANGE
+            .accordeon-body(data-accordeon-body)
+                #slider-range.range__slider
+                    span.ui-slider-handle.ui-corner-all.ui-state-default
+                        label(for="amount").range__label
+                        input(type="text" id="amount" readonly).range__input
+                    span.ui-slider-handle.ui-corner-all.ui-state-default
+                        label(for="amount1").range__label
+                        input(type="text" id="amount1" readonly).range__input
+
+

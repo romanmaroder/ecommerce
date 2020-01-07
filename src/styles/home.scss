@@ -1,0 +1,10 @@
+// variables, mixins, utilities
+@import "helpers/variables.scss";
+@import "helpers/mixins.scss";
+@import "helpers/utilities.scss";
+
+// style this page
+@import "page/page-home.scss";
+
+// common styles
+@import "common/card.scss";

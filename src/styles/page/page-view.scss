@@ -1,0 +1,12 @@
+.wrapper {
+  display : flex;
+  padding : 50px 0 40px;
+
+  &__content {
+	flex : 1 1 auto;
+	position : relative;
+	&--active {
+	  left:155px
+	}
+  }
+}

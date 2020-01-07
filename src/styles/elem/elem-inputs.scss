@@ -1,0 +1,47 @@
+.elem-input {
+    height : 51px;
+    padding: 0 20px;
+    border : 1px solid #c4c4c4;
+}
+
+.elem-textarea {
+    padding: 20px;
+    border : 1px solid #c4c4c4;
+}
+
+.elem-input-label {
+    position      : relative;
+    vertical-align: top;
+    padding-left  : 25px;
+
+    .elem-input-checkbox {
+        display: none;
+
+        &:checked+span:before {
+            display: block;
+        }
+    }
+
+    span {
+        display         : inline-block;
+        position        : absolute;
+        left            : 0;
+        right           : 0;
+        width           : 16px;
+        height          : 16px;
+        border          : 1px solid #c4c4c4;
+        background-color: #ffffff;
+
+        &:before {
+            content         : '';
+            display         : none;
+            position        : absolute;
+            top             : 50%;
+            left            : 50%;
+            transform       : translate(-50%, -50%);
+            width           : 9px;
+            height          : 9px;
+            background-color: #eb4644;
+        }
+    }
+}

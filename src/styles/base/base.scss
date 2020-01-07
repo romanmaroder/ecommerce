@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  box-sizing : border-box;
+}
+
+html {
+  height : 100%;
+}
+
+body {
+  background  : $bg-base;
+  font-family : $font-base;
+  font-size   : $font-size-base;
+  font-weight : $font-weight-base;
+  color       : $color-base;
+
+  margin      : 0;
+  padding     : 0;
+  min-width   : 320px;
+  width       : 100%;
+
+}
+
+.container {
+  max-width : 1010px;
+  width     : 100%;
+  margin    : 0 auto;
+  padding   : 0 20px;
+
+}
+.boby-active {
+  overflow: hidden;
+}
+.content {
+  max-width : 1300px;
+  width     : 100%;
+  margin    : 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight : normal;
+  margin      : 0;
+}
+
+p {
+  margin  : 0;
+  padding : 0;
+}
+
+a {
+  text-decoration : none;
+  color           : $link-static-color;
+  font-size       : 13px;
+  font-weight     : 700;
+  line-height     : 27px;
+  cursor          : pointer;
+
+  &:hover,
+  &:focus {
+	color : $link-hover-color;
+  }
+
+  // &:visited {
+  // 	color: $link-visited-color;
+  // }
+}
+
+ul,
+ol {
+  list-style : none;
+  padding    : 0;
+  margin     : 0;
+
+  & li {
+	padding : 0;
+	margin  : 0;
+  }
+}
+
+img,
+svg {
+  max-width : 100%;
+}
+
+img {
+  display : inline-block;
+  height  : auto;
+  border  : none;
+}
+
+table {
+  border-collapse : collapse;
+  table-layout    : fixed;
+  border-spacing  : 0;
+  width           : 100%;
+}
+
+textarea {
+  resize : none;
+}
+
+fieldset {
+  border  : 1px solid #C0C0C0;
+  padding : 0.35em 0.75em 0.45em
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style  : normal;
+  font-weight : normal;
+}
+
+acronym[title],
+abbr[title] {
+  border-bottom   : none;
+  text-decoration : underline;
+  text-decoration : underline dotted;
+}
+
+q:before,
+q:after {
+  content : '';
+}
+
+figure {
+  display : block;
+  margin  : 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content : " ";
+  /* 1 */
+  display : block;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear : both;
+}
+
+.clear {
+  clear      : both;
+  height     : 0;
+  width      : 0;
+  visibility : hidden;
+}
+
+.hidden {
+  display : none;
+}
