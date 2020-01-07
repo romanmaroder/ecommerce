@@ -77,11 +77,8 @@
   }
 
   &-login {
-	display     : none;
 	margin-left : 20px;
-	@media screen and (min-width : 768px) {
-	  display : block;
-	}
+	display : block;
   }
 
   &__burger {
