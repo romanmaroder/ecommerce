@@ -69,7 +69,7 @@
   &-cart {
 	display  : block;
 	position : relative;
-	left     : -60px;
+	left     : -20px;
 	@media screen and (min-width : 768px) {
 	  display : block;
 	  left    : 0;
@@ -77,8 +77,11 @@
   }
 
   &-login {
-	margin-left : 20px;
-	display : block;
+	margin-left : 0px;
+	display     : block;
+	@media screen and (min-width : 768px) {
+	  margin-left : 20px;
+	}
   }
 
   &__burger {
@@ -105,10 +108,10 @@
 }
 
 .cart {
-  cursor : pointer;
+  cursor   : pointer;
+  position : relative;
 
-  &::after {
-	content          : attr(data-count);
+  &__count {
 	position         : absolute;
 	width            : 11px;
 	height           : 11px;
@@ -135,9 +138,9 @@
 	left             : 50%;
 	transform        : translate(-62%, 20px);
 	z-index          : 5;
-@media screen and (min-width: 768px){
-  transform        : translate(-50%, 20px);
-}
+	@media screen and (min-width : 768px) {
+	  transform : translate(-50%, 20px);
+	}
 
 	&--show {
 	  display : flex;
@@ -161,8 +164,8 @@
   }
 
   &__main-link {
-	text-align: center;
-	text-transform: uppercase;
+	text-align     : center;
+	text-transform : uppercase;
   }
 }
 
@@ -174,7 +177,7 @@
   &__select {
 	position           : relative;
 	padding            : 4px 25px 4px 9px;
-	width              : 116px;
+	width              : 100px;
 	height             : 30px;
 	border             : 0.5px solid #555F76;
 	border-radius      : 3px;
@@ -191,6 +194,10 @@
 
 	&::-ms-expand {
 	  display : none;
+	}
+
+	@media screen and (min-width: 375px){
+	  width : 116px;
 	}
   }
 
@@ -211,6 +218,8 @@
   height   : 5px;
   position : relative;
   z-index  : 12;
+  order: 2;
+  margin-left : 20px;
 
   &__line {
 	display          : block;
@@ -244,7 +253,10 @@
 	}
   }
 
-
+  &--active {
+	position : absolute;
+	right : 20px;
+  }
   &--active &__line {
 	height : 0;
 
@@ -275,7 +287,7 @@
 	  line-height     : 27px;
 	  cursor          : pointer;
 	  &--active {
-		color:$link-hover-color;
+		color : $link-hover-color;
 	  }
 	}
 
