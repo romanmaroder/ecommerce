@@ -87,6 +87,7 @@
   &__input {
 	border        : none;
 	border-bottom : 0.3px solid $border-color-select;
+	outline:none;
 	padding       : 19px 0 5px;
 	background    : transparent;
 	width         : 197px;
@@ -94,6 +95,17 @@
 	&::placeholder {
 	  color   : $headings-color;
 	  opacity : 0.4;
+	  position: relative;
+	  right : 0;
+	  transition: right 0.5s ease-in;
+
+	}
+	&:focus {
+	  &::placeholder {
+		position: relative;
+		right      : -100%;
+		transition : right 0.5s ease-in;
+	  }
 	}
 
 	&--padding {
@@ -118,5 +130,10 @@
 	&:hover {
 	  color : #3673FF;
 	}
+  }
+
+  &__form {
+	display        : flex;
+	flex-direction : column;
   }
 }
